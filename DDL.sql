@@ -1,26 +1,28 @@
 // create
 
-create table employee(
-  emp_id int,
-  first_name varchar2(20),
-  emp_salary number(10)
+CREATE TABLE employee(
+  emp_id INT
+  //emp_id INT PRIMARY KEY,
+  first_name VARCHAR2(20),
+  emp_salary NUMBER(10)
+  PRIMARY KEY (emp_id)
 );
 
-desc employee;
+DESC employee;
 
 //alter
 
-alter table employee add last_name varchar2(10);
-alter table employee add address varchar2(20);
+ALTER TABLE employee ADD last_name VARCHAR2(10);
+ALTER TABLE employee ADD address VARCHAR2(20);
 
-alter table employee drop column address;
+ALTER TABLE employee DROP COLUMN address;
 
-drop table employee;
+DROP TABLE employee;
 
-alter table employee modify emp_id varchar2(10)
+ALTER TABLE employee MODIFY emp_id VARCHAR2(10)
 
-alter table employee rename column emp_id to emp_no;
+ALTER TABLE employee RENAME COLUMN emp_id TO emp_no;
 
-alter table employee rename to emp;
+ALTER TABLE employee RENAME TO emp;
 
-alter table emp add primary key (emp_no);
+ALTER TABLE emp ADD PRIMARY KEY (emp_no);
